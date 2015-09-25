@@ -1,6 +1,11 @@
-let mapleader=" "
+let mapleader="\<Space>"
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+nmap 0 ^
+
+nmap k gk " to move through wrapped lines of text and not skip them
+nmap j gj 
 
 set tabstop=2
 set shiftwidth=2
@@ -56,3 +61,7 @@ let g:VtrUseVtrMaps = 1
 
 map <Leader>sf :VtrSendFile<CR>
 map <Leader>ap :VtrAttachToPane<CR>
+
+" insert mode mappings
+imap jk <esc>:w<CR>
+imap kj <esc>:w<CR>
