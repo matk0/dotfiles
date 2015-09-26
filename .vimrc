@@ -4,8 +4,9 @@ filetype off                  " required
 
 nmap 0 ^
 
-nmap k gk " to move through wrapped lines of text and not skip them
-nmap j gj 
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 
 set tabstop=2
 set shiftwidth=2
@@ -41,18 +42,25 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-rails'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " vim-rspec
-let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
+"let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
+let g:rspec_command = "Dispatch rspec {spec}"
 
 " vim-rspec key configurations
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
+map <Leader>s :w<cr>:call RunNearestSpec()<CR>
+map <Leader>l :w<cr>:call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 
