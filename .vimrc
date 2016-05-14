@@ -18,6 +18,13 @@ set relativenumber
 set number
 set splitbelow
 set splitright
+set ignorecase
+set smartcase
+
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
 set completeopt=longest,menu,preview
 
@@ -77,6 +84,7 @@ Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
 Plugin 'duggiefresh/vim-easydir'
 Plugin 'majutsushi/tagbar'
+Plugin 'kylef/apiblueprint.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -129,9 +137,7 @@ nmap ]q :cnext<cr>
 
 let g:lightline = {
       \ 'colorscheme': 'solarized_dark',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ }
       \ }
 
 nmap <Leader>b :TagbarToggle<CR>
+nmap <Leader>i mmgg=G`m<CR>
