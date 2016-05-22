@@ -1,0 +1,32 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[user]
+	name = matk0
+	email = matej.lukasik@gmail.com
+[push]
+	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[init]
+	templatedir = ~/.git_template
+[alias]
+	sla = log --oneline --decorate --graph --all
+	glog = log -E -i --grep
+	uncommit = reset --soft HEAD^
+	s = status
+	a = add .
+	unstage = reset
+  co = checkout
+  d = diff
+  mup = !git checkout master && git pull && git checkout -
+  c = commit -m
+[merge]
+  ff = only
