@@ -29,4 +29,3 @@
   mup = !git checkout master && git pull && git checkout -
   c = commit -m
 [merge]
-  ff = only
