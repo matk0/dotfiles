@@ -20,6 +20,7 @@ set splitbelow
 set splitright
 set ignorecase
 set smartcase
+set clipboard=unnamed
 
 set winwidth=84
 set winheight=5
@@ -86,6 +87,7 @@ Plugin 'duggiefresh/vim-easydir'
 Plugin 'majutsushi/tagbar'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'christoomey/vim-conflicted'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
