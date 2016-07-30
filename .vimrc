@@ -32,8 +32,9 @@ set completeopt=longest,menu,preview
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 execute pathogen#infect()
-syntax enable
 set background=dark
 colorscheme solarized
 
@@ -72,6 +73,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
@@ -88,10 +90,15 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-conflicted'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+syntax enable
 filetype plugin indent on    " required
+autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " vim-rspec
 "let g:rspec_command = "call VtrSendCommand('rspec {spec}')"

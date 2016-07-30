@@ -30,3 +30,5 @@
   c = commit -m
   com = !git checkout master && git pull
 [merge]
+[core]
+	editor = /usr/bin/vim
