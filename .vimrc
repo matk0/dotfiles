@@ -32,7 +32,9 @@ set completeopt=longest,menu,preview
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'jslint']
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 0
 
 execute pathogen#infect()
 set background=dark
@@ -76,6 +78,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
@@ -93,6 +96,8 @@ Plugin 'christoomey/vim-conflicted'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
