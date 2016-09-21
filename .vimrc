@@ -36,7 +36,6 @@ let g:syntastic_javascript_checkers = ['eslint', 'jslint']
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 0
 
-execute pathogen#infect()
 set background=dark
 colorscheme solarized
 
