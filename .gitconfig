@@ -28,6 +28,8 @@
   d = diff
   mup = !git checkout master && git pull && git checkout -
   c = commit -m
+  p = push
+
   com = !git checkout master && git pull
 [merge]
 [core]
