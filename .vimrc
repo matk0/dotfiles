@@ -20,13 +20,12 @@ set splitbelow
 set splitright
 set ignorecase
 set smartcase
-set clipboard=unnamed
 
 set winwidth=84
 set winheight=5
 set winminheight=5
 set winheight=999
-
+set clipboard+=unnamedplus
 set completeopt=longest,menu,preview
 
 let g:rubycomplete_buffer_loading = 1
@@ -60,6 +59,7 @@ call vundle#begin()
 " call vundle#begin('~/some/path/here')
 "
 " let Vundle manage Vundle, required
+Plugin 'scrooloose/nerdtree'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
@@ -155,3 +155,4 @@ let g:lightline = {
 
 nmap <Leader>b :TagbarToggle<CR>
 nmap <Leader>i mmgg=G`m<CR>
+map <Leader>n :NERDTreeToggle<CR>
