@@ -1,4 +1,4 @@
-rvm use 2.2.2
+rvm use 2.3.0
 set EDITOR nvim
 
 set -l base03  002b36

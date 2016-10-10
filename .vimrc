@@ -59,6 +59,7 @@ call vundle#begin()
 " call vundle#begin('~/some/path/here')
 "
 " let Vundle manage Vundle, required
+Plugin 'slim-template/vim-slim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -92,7 +93,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-conflicted'
-Plugin 'slim-template/vim-slim.git'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 

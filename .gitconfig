@@ -4,7 +4,7 @@
 	smudge = git media smudge %f
 [user]
 	name = matk0
-	email = matej.lukasik@gmail.com
+	email = matej@occupationbliss.com
 [push]
 	default = simple
 [filter "hawser"]
@@ -29,7 +29,6 @@
   mup = !git checkout master && git pull && git checkout -
   c = commit -m
   p = push
-
   com = !git checkout master && git pull
 [merge]
 [core]
