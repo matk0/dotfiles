@@ -1,3 +1,3 @@
 function v
-  vim $argv
+  vim --servername '(date +%s)'
 end

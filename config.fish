@@ -1,5 +1,4 @@
-rvm use 2.3.0
-set EDITOR nvim
+set EDITOR vim
 
 set -l base03  002b36
 set -l base02  073642
@@ -54,7 +53,7 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 
 function fish_prompt
-  echo (basename $PWD)"| "$USER "-> "(__fish_git_prompt)
+  echo (basename $PWD)" | "$USER "-> "(__fish_git_prompt)
   set last_status $status
 
   set_color $fish_color_cwd

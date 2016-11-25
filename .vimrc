@@ -95,7 +95,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-conflicted'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-
+Plugin 'deckardai/vim-deckard'
 
 
 " All of your Plugins must be added before the following line
@@ -156,3 +156,5 @@ let g:lightline = {
 nmap <Leader>b :TagbarToggle<CR>
 nmap <Leader>i mmgg=G`m<CR>
 map <Leader>n :NERDTreeToggle<CR>
+
+set tags+=gems.tags
