@@ -96,6 +96,7 @@ Plugin 'christoomey/vim-conflicted'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'deckardai/vim-deckard'
+Plugin 'danchoi/ri.vim'
 
 
 " All of your Plugins must be added before the following line

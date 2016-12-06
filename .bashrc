@@ -4,3 +4,6 @@ export EDITOR='nvim'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# added by travis gem
+[ -f /Users/matejlukasik/.travis/travis.sh ] && source /Users/matejlukasik/.travis/travis.sh
