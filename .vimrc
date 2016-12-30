@@ -97,7 +97,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'deckardai/vim-deckard'
 Plugin 'danchoi/ri.vim'
-
+Plugin 'justinj/vim-react-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -127,6 +127,7 @@ imap jk <esc>:w<CR>
 imap kj <esc>:w<CR>
 :command! W w
 :command! Q q
+:command! Qa qa
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
