@@ -100,6 +100,7 @@ Plugin 'danchoi/ri.vim'
 Plugin 'justinj/vim-react-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'timonv/vim-cargo'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -169,9 +170,9 @@ autocmd FileType ruby nmap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
 autocmd FileType ruby xmap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
 autocmd FileType ruby imap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
 
-autocmd FileType ruby nmap <buffer> <Leader>c <Plug>(seeing_is_believing-clean)
-autocmd FileType ruby xmap <buffer> <Leader>c <Plug>(seeing_is_believing-clean)
-autocmd FileType ruby imap <buffer> <Leader>c <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby nmap <buffer> <Leader>x <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby xmap <buffer> <Leader>x <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby imap <buffer> <Leader>x <Plug>(seeing_is_believing-clean)
 
 " xmpfilter compatible
 autocmd FileType ruby nmap <buffer> <D-r> <Plug>(seeing_is_believing-run_-x)
