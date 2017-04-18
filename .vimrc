@@ -101,6 +101,9 @@ Plugin 'justinj/vim-react-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'timonv/vim-cargo'
+Plugin 'shougo/neocomplete.vim'
+Plugin 'townk/vim-autoclose'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
