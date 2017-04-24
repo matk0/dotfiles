@@ -9,6 +9,7 @@ endif
 runtime macros/matchit.vim
 nmap 0 ^
 
+set encoding=utf8
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -87,7 +88,6 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
 Plugin 'skalnik/vim-vroom'
 Plugin 'ervandew/supertab'
-Plugin 'itchyny/lightline.vim'
 Plugin 'duggiefresh/vim-easydir'
 Plugin 'majutsushi/tagbar'
 Plugin 'kylef/apiblueprint.vim'
@@ -103,6 +103,8 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'timonv/vim-cargo'
 Plugin 'shougo/neocomplete.vim'
 Plugin 'townk/vim-autoclose'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
@@ -182,3 +184,6 @@ autocmd FileType ruby imap <buffer> <D-r> <Plug>(seeing_is_believing-run_-x)
 autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
 autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
 autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
+
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts = 1
