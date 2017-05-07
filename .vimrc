@@ -77,9 +77,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
@@ -95,9 +93,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-conflicted'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'deckardai/vim-deckard'
 Plugin 'danchoi/ri.vim'
-Plugin 'justinj/vim-react-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'timonv/vim-cargo'
@@ -120,7 +116,6 @@ let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 " vim-rspec key configurations
 map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
 map <Leader>s :w<cr>:call RunNearestSpec()<CR>
-map <Leader>l :w<cr>:call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:user_emmet_leader_key='<Leader>y'
 
@@ -187,3 +182,10 @@ autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
 
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+map <Leader>l :redraw!<CR>
