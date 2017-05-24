@@ -33,8 +33,6 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
 let g:syntastic_javascript_checkers = ['eslint', 'jslint']
-let g:jsx_ext_required = 0
-let g:jsx_pragma_required = 0
 
 set background=dark
 colorscheme solarized
@@ -91,8 +89,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-conflicted'
-Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'danchoi/ri.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 't9md/vim-ruby-xmpfilter'
