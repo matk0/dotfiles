@@ -62,3 +62,5 @@ function fish_prompt
 
   set_color normal
 end
+
+rvm default" >> ~/.config/fish/config.fish

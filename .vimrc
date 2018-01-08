@@ -32,7 +32,6 @@ set completeopt=longest,menu,preview
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
-let g:syntastic_javascript_checkers = ['eslint', 'jslint']
 
 set background=dark
 colorscheme solarized
@@ -77,7 +76,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -100,12 +99,23 @@ Plugin 'townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'matze/vim-move'
+Plugin 'moll/vim-node'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 syntax enable
 filetype plugin indent on    " required
 autocmd BufNewFile,BufRead *.slim set ft=slim
+
+"javascript-libraries-syntax.vim
+let g:used_javascript_libs = 'jquery, underscore, chai, react'
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_chai = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_react = 1
 
 " vim-rspec
 "let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
@@ -130,6 +140,9 @@ imap kj <esc>:w<CR>
 :command! Q q
 :command! Qa qa
 
+
+
+" SYNTASTIC
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -138,7 +151,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'eslint %:p'
+
 map <Leader>m :SyntasticToggleMode<CR>
+" // 
+
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -187,3 +205,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 map <Leader>l :redraw!<CR>
+map <Leader>p :Prettier<CR>
+
+let g:prettier#config#bracket_spacing = 'true'
