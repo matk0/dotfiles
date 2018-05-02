@@ -63,4 +63,7 @@ function fish_prompt
   set_color normal
 end
 
-rvm default" >> ~/.config/fish/config.fish
+set fish_greeting ""
+status --is-interactive; and source (rbenv init -|psub)
+
+alias v 'vim'
