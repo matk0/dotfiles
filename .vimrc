@@ -105,6 +105,7 @@ Plugin 'moll/vim-node'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'jparise/vim-graphql'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
