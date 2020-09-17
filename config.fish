@@ -66,4 +66,14 @@ end
 set fish_greeting ""
 status --is-interactive; and source (rbenv init -|psub)
 
-alias v 'vim'
+alias v 'mvim -v'
+set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/mongodb-community@4.0/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/mongodb-community@4.0/bin" $fish_user_paths
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/matejlukasik/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
+alias ls '/usr/local/bin/gls --color -h --group-directories-first -1'

@@ -34,3 +34,5 @@
 [merge]
 [core]
 	editor = /usr/bin/vim
+[gui]
+	recentrepo = /Users/matejlukasik/Projects/journalius

@@ -22,12 +22,12 @@ set splitbelow
 set splitright
 set ignorecase
 set smartcase
-
+set previewheight=15
 set winwidth=84
-set winheight=5
-set winminheight=5
+set winheight=20
+set winminheight=15
 set winheight=999
-set clipboard+=unnamedplus
+set clipboard=unnamed
 set completeopt=longest,menu,preview
 
 let g:rubycomplete_buffer_loading = 1
@@ -75,7 +75,6 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/emmet-vim'
@@ -95,30 +94,23 @@ Plugin 'danchoi/ri.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'timonv/vim-cargo'
-Plugin 'shougo/neocomplete.vim'
 Plugin 'townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'matze/vim-move'
 Plugin 'moll/vim-node'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'jparise/vim-graphql'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'sirver/ultisnips'
+Plugin 'epilande/vim-react-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 syntax enable
 filetype plugin indent on    " required
 autocmd BufNewFile,BufRead *.slim set ft=slim
-
-"javascript-libraries-syntax.vim
-let g:used_javascript_libs = 'jquery, underscore, chai, react'
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_chai = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_react = 1
 
 " vim-rspec
 "let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
@@ -137,12 +129,11 @@ map <Leader>sf :VtrSendFile<CR>
 map <Leader>ap :VtrAttachToPane<CR>
 
 " insert mode mappings
-imap jk <esc>:w<CR>
-imap kj <esc>:w<CR>
+inoremap jk <esc>:w<CR>
+inoremap kj <esc>:w<CR>
 :command! W w
 :command! Q q
 :command! Qa qa
-
 
 
 " SYNTASTIC
@@ -155,18 +146,19 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'eslint %:p'
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 map <Leader>m :SyntasticToggleMode<CR>
-" // 
-
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'client\node_modules\|DS_Store\|git'
 
 let g:ctrlp_working_path_mode = 'ra'
 
 map <Leader>h :noh<CR>
+
+nmap <Leader>gs :Gstatus<cr>
 
 autocmd FileType ruby nmap <leader>g :grep -ir <c-r><c-w> app<cr>
 nmap <leader>G :grep -ir  app<left><left><left><left>
@@ -180,24 +172,10 @@ let g:lightline = {
 nmap <Leader>b :TagbarToggle<CR>
 nmap <Leader>i mmgg=G`m<CR>
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>l :redraw!<CR>
+map <Leader>p :Prettier<CR>
 
 set tags+=gems.tags
-
-let g:xmpfilter_cmd = "seeing_is_believing"
-
-autocmd FileType ruby nmap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
-autocmd FileType ruby xmap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
-autocmd FileType ruby imap <buffer> <D-m> <Plug>(seeing_is_believing-mark)
-
-" xmpfilter compatible
-autocmd FileType ruby nmap <buffer> <D-r> <Plug>(seeing_is_believing-run_-x)
-autocmd FileType ruby xmap <buffer> <D-r> <Plug>(seeing_is_believing-run_-x)
-autocmd FileType ruby imap <buffer> <D-r> <Plug>(seeing_is_believing-run_-x)
-
-" auto insert mark at appropriate spot.
-autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
-autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
-autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
 
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
@@ -207,7 +185,10 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
-map <Leader>l :redraw!<CR>
-map <Leader>p :Prettier<CR>
-
 let g:prettier#config#bracket_spacing = 'true'
+set macligatures
+
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+let g:ycm_echo_current_diagnostic = 0
+let g:ycm_show_diagnostics_ui = 0
